@@ -26,13 +26,14 @@ def StoreData():
     print("-- Success --")
     menu()                                            # goes back to main menu as its a menu driven program and software should no close until user asks to
 
+# CODE EDITED HERE
 # To search a customer from the file and display all data of that person.
 def SearchName():
-    AccNo=int(input("AccNo: "))                       # Search is based on AccNo, hence we ask user for it
+    AccName=int(input("AccName: "))      # CODE EDITED HERE                 # Search is based on AccNo, hence we ask user for it
     with open("bank.dat","rb") as f:                  # easier to use 'with open' method as it eliminates need of try except statements
         while True:                                   # keeps on checking data untill requirment is satisfised, here untill data of that perticular person is found
             data=pickle.load(f)                       # data is loaded one by one, instance if file is like [[data1][data2][data3]], only [data1] is loaded first attempt and then [data2] second attempt and so on
-            if data[0]==AccNo:                        # we compare the value of AccNo in data to the entered accno, when satisfied, it proceeds or else continues with while loop as its not broken yet
+            if data[1]==AccName:          # CODE EDITED HERE                # we compare the value of AccNo in data to the entered accno, when satisfied, it proceeds or else continues with while loop as its not broken yet
                 print(data)                           # if if statement satisfies, the entire list of data it was using to compare at that instant gets printed.
                 break                                 # while loop is stopped if the condition as met, because was task is complete and we dont require to keep on checking data as logically only one customer will have that AccNo.
     menu()                                            # goes back to main menu as its a menu driven program and software should no close until user asks to
