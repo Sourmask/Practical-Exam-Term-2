@@ -29,7 +29,7 @@ def StoreData():
 # CODE EDITED HERE
 # To search a customer from the file and display all data of that person.
 def SearchName():
-    AccName=int(input("AccName: "))      # CODE EDITED HERE                 # Search is based on AccNo, hence we ask user for it
+    AccName=input("AccName: ")      # CODE EDITED HERE                 # Search is based on AccNo, hence we ask user for it
     with open("bank.dat","rb") as f:                  # easier to use 'with open' method as it eliminates need of try except statements
         while True:                                   # keeps on checking data untill requirment is satisfised, here untill data of that perticular person is found
             data=pickle.load(f)                       # data is loaded one by one, instance if file is like [[data1][data2][data3]], only [data1] is loaded first attempt and then [data2] second attempt and so on
